@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+    }
+    .img{
+        margin: 10px;
+        border-radius: 10px;
+        border: double white;
+        cursor: pointer;
+    }
+    .butterfly{
+        border:double black;
+    }
+    .theme-dark{
+        background-color: #3d3d29;
+        color: #fff;
+    }
+    .theme-white{
+        background-color: #fff;
+        color: #3d3d29;
+    }
+    .text{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .heading{
+        text-align: center;
+        font-size: 40px;
+        color:tomato;
+    }
+    
+</style>
+<body id="body">
+    <h1 class="heading"><i><u>This is Light/Dark Mode Theme Changer!!😇</u></i></h1>
+    <div class="container">
+        <img src="./img/butterfly-dark.png"height="100px" class="img butterfly" id="dark" onclick="darkmode()"/>
+
+        <img src="./img/butterfly-white.png"height="100px" class="img" id="white" onclick="whitemode()" />
+         </div>
+        <p class="text">
+            <h2>Hey!! I am Butterfly🦋</h2>
+          <i>A butterfly is a flying insect with a small body and large, often colorful wings.
+         Some gardeners plant specific flowers that attract butterflies. Butterflies are closely related to moths, 
+         which also have wings that are large in proportion to their bodies and antennae.
+         Butterflies (and moths) are the only group of insects that have scales covering their wings, although some butterflies have reduced scales. They differ from other insects also by their ability to coil up their proboscis.</i>
+         <br>
+         <br>
+         <i>Butterflies are insects. They have 3 body parts: a head, thorax (middle part) and abdomen (tail end). They also have 6 legs and 4 wings. They can see ultraviolet light and so see flowers very differently to humans! They use their long feelers (antennae) to sniff out food and other butterflies.</i>
+        </p>
+
+    <script>
+        function darkmode()
+        {
+            const imgdark = document.getElementById('dark');
+            imgdark.classList.add('butterfly');
+
+            const imgWhite = document.getElementById('white');
+            imgWhite.classList.remove('butterfly');
+
+            const bodyElement = document.getElementById('body');
+            bodyElement.className = "theme-dark";
+        }
+        function whitemode()
+        {
+            const imgdark = document.getElementById('dark');
+            imgdark.classList.remove('butterfly');
+
+            const imgWhite = document.getElementById('white');
+            imgWhite.classList.add('butterfly');
+
+            const bodyElement = document.getElementById('body');
+            bodyElement.className = "theme-white";
+        }
+    </script>
+</body>
+</html>
